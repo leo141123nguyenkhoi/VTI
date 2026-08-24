@@ -1,3 +1,9 @@
-   h1{
-      color: red;
-    }
+
+.container {
+   display: flex;
+}
+.column {
+   flex: 1;
+   padding: 20px;
+   border: 1px solid black;
+}

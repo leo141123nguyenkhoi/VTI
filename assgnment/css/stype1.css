@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Bài 1: Box có margin 70px */
+.question1 {
+    border: 1px solid #4CAF50;
+    margin: 70px;
+    padding: 10px;
+}
+
+/* Bài 2.1: Box có padding 70px */
+.question21 {
+    border: 1px solid #4CAF50;
+    padding: 70px;
+}
+
+/* Bài 2.2: Căn giữa theo chiều dọc */
+.parent {
+    padding: 30px 0;
+    border: 1px solid red;
+    margin-top: 20px;
+}
+
+.parent p {
+    border: 1px solid green;
+}

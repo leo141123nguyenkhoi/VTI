@@ -1,0 +1,188 @@
+.question1{
+    text-align: center;
+}
+.mom {
+    color: red;
+    text-align: center;
+    background-color: purple;
+}
+.baitho{
+    text-align: center;
+    background-color: yellow;
+}
+.doan1{
+    color: blue;
+}
+.doan2{
+    color: red;
+}
+.doan3{
+    color: green
+}
+hr{
+    width: 40%;
+    border: none;
+    border-top: 1px solid #808080;
+    margin: 15px auto;
+}
+.red{
+    color: red;
+}
+.for{
+    background-color: #bebebe; /* Màu nền xám */
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.flower{
+    width: 200px;
+    height: auto;
+}
+.wrapper {
+    display: flex;
+}
+.gioithieu{
+    background-color: palevioletred;
+}
+.lienhe{
+    background-color: palevioletred;
+}
+.monngon{
+    
+    background-color: #e5b399;
+    max-width: 800px;
+    width: 100%;
+    padding: 30px 40px;
+    text-align: center;
+}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    color: #8c3a1b;
+    padding: 0px 0px 30px 0px;
+}
+.monngon1{
+    display: flex;
+}
+.banhmi{
+    width: 180px;
+    height: auto;
+}
+table {
+    border-collapse: collapse;
+    width: 420px;
+    border: 2px solid #5a2651;
+}
+th, td {
+            border: 1px solid #5a2651;
+            padding: 6px 12px;
+            font-size: 16px;
+}
+th {
+    background-color: #933d1c;
+    color: #ffffff;
+    font-weight: bold;
+}
+th:nth-child(1) {
+    text-align: center;
+}
+
+th:nth-child(2) {
+    text-align: center;
+}
+
+td:nth-child(1) {
+    text-align: center;
+}
+
+td:nth-child(2) {
+    text-align: left;
+}
+
+/* Màu dòng xen kẽ dùng thêm hậu tố */
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+tr:nth-child(even) {
+    background-color: #d4906e;
+}
+
+.chuongtrinh{
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+.nganhlaptrinh{
+    color: red;
+    font-size: 30px;
+
+}
+.khungbang{
+    padding-left: 20px;
+    
+}
+.csstable{
+   max-width: 800px;
+   width: 100%;
+}
+.cssthead tr:first-child th {
+    background-color: #ff0000; /* Màu đỏ */
+    color: #ffffff;
+}
+.cssthead tr:nth-child(2) th{
+    background-color: red;
+    color: #ffffff;
+}
+.csstable :nth-child(odd) {
+    background-color: #ffffff;
+}
+.csstable :nth-child(even) {
+    background-color: white;
+}
+.csstable .left{
+    text-align: left;
+}
+.csstable .center{
+    text-align: center;
+}
+.csstable {
+    border-collapse: collapse; /* Gộp các viền đôi thành viền đơn */
+    border: 2px solid #ff00ff; /* Viền ngoài cùng màu tím */
+    width: 100%;
+}
+
+.csstable th,
+.csstable td {
+    border: 1px solid #ff00ff; /* Toàn bộ vạch kẻ bên trong màu tím */
+}
+
+form table{
+    width: 500px;
+    margin: 30px 80px 30px 80px;
+    text-align: center;
+}
+form table tr td:first-child {
+    width: 35%;
+}
+from table tr td:last-child {
+    width: 65%;
+}
+.phieudangky{
+    margin: 20px 60px;
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+table .cotphieu{
+    background-color: greenyellow;
+    text-align: left;
+    color: green;
+    border: 2px solid black;
+
+}
+table .center-btn {
+    background-color: greenyellow;
+    border: 2px solid black;
+}
