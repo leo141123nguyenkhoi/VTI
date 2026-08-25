@@ -1,0 +1,71 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Giữ khung cố định như frameset */
+        }
+
+        /* Khung tổng thể chia làm 2 phần dọc: Trên 40%, Dưới 60% */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* 1. Phần Banner trên cùng (40%) */
+        .banner-box {
+            height: 40%;
+            width: 100%;
+            border-bottom: 2px solid #a0a0a0;
+            overflow: hidden;
+        }
+
+        .banner-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 2. Phần bên dưới (60%) chia thành 2 cột ngang */
+        .bottom-box {
+            height: 60%;
+            display: flex;
+            width: 100%;
+        }
+
+        /* Cột Menu bên trái (20%) */
+        .menu-box {
+            width: 20%;
+            border-right: 2px solid #a0a0a0;
+            padding: 15px 10px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+        }
+
+        .menu-box ul {
+            padding-left: 20px;
+        }
+
+        .menu-box li {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .menu-box a {
+            color: #0000ee;
+            text-decoration: underline;
+        }
+
+        /* Khung Nội dung chính bên phải (80%) */
+        .main-box {
+            width: 80%;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #ffffff;
+        }
