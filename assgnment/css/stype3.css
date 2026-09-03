@@ -1,0 +1,29 @@
+.thietke{
+    width: 600px;
+    height: 600px;
+    border: 2px solid red;
+}
+header{
+    height: 40%;
+    width: 100%;
+    background-color: yellow;
+}
+.body{
+    display: flex;
+    height: 52%;
+    width: 100%;
+}
+aside{
+    background-color: red;
+    width: 30%;
+    height: 100%;
+}
+main{
+    background-color: #CCCCCC;
+    width: 70%;
+    height: 100%;}
+footer{
+    background-color: black;
+    height: 8%;
+    width: 100%;
+}

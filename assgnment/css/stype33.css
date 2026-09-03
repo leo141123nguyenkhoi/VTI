@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #f4f4f9;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Thẻ chứa toàn bộ layout có độ rộng 900px */
+.container {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách hở giữa các khối là 15px */
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: #222255;
+    line-height: 1.3;
+}
+
+header {
+    height: 140px;
+    border: 3px solid #ff00cc;
+}
+
+.main-body {
+    display: flex;
+    gap: 15px; /* Khoảng cách giữa 3 cột là 15px */
+    min-height: 380px;
+}
+
+.sidebar-left {
+    flex: 1.2;
+    border: 3px solid #0000ff;
+}
+
+.content {
+    flex: 3.8;
+    border: 3px solid #ff0000;
+}
+
+.sidebar-right {
+    flex: 1.2;
+    border: 3px solid #e6d000;
+}
+
+footer {
+    height: 55px;
+    border: 3px solid #00e600;
+}
