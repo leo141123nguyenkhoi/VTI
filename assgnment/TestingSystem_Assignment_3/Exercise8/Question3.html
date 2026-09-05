@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc hai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 2px;
+            width: 380px;
+            border: 1px solid #888;
+        }
+
+        td {
+            border: 1px solid #aaa;
+            padding: 6px 10px;
+            vertical-align: middle;
+        }
+
+        td:first-child {
+            width: 30%;
+        }
+
+        td:last-child {
+            width: 70%;
+        }
+
+        .center-cell {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 95%;
+            padding: 3px 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 3px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Giải phương trình bậc hai: ax<sup>2</sup> + bx + c = 0</h2>
+
+    <table>
+        <tr>
+            <td>Nhập a</td>
+            <td><input type="text" id="a"></td>
+        </tr>
+        <tr>
+            <td>Nhập b</td>
+            <td><input type="text" id="b"></td>
+        </tr>
+        <tr>
+            <td>Nhập c</td>
+            <td><input type="text" id="c"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="center-cell">
+                <button type="button" onclick="solveEquation()">Giải phương trình</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Kết quả</td>
+            <td><input type="text" id="result" readonly></td>
+        </tr>
+    </table>
+
+    <script>
+        "use strict";
+
+        function solveEquation() {
+            const a = Number(document.getElementById("a").value);
+            const b = Number(document.getElementById("b").value);
+            const c = Number(document.getElementById("c").value);
+
+            let result = "";
+
+            if (a === 0) {
+                if (b === 0) {
+                    if (c === 0) {
+                        result = "Vô số nghiệm";
+                    } else {
+                        result = "Vô nghiệm";
+                    }
+                } else {
+                    const x = -c / b;
+                    result = "Bậc 1: x = " + Number(x.toFixed(2));
+                }
+            } else {
+                const delta = b * b - 4 * a * c;
+
+                if (delta > 0) {
+                    const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    result = "x1 = " + Number(x1.toFixed(2)) + "; x2 = " + Number(x2.toFixed(2));
+                } else if (delta === 0) {
+                    const x = -b / (2 * a);
+                    result = "Nghiệm kép x = " + Number(x.toFixed(2));
+                } else {
+                    result = "Vô nghiệm";
+                }
+            }
+
+            document.getElementById("result").value = result;
+        }
+    </script>
+</body>
+</html>

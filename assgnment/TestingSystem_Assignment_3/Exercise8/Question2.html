@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: separate;
+            border-spacing: 2px;
+            width: 460px;
+            border: 1px solid gray;
+        
+        }
+        td{
+            border: 1px solid gray;
+            padding: 6px 8px;
+            width: 50%;
+            vertical-align: middle;
+        }
+        .btn{
+            text-align: center;
+        }
+        #lenght  {
+            width: 95%;
+            padding: 3px 5px;
+            box-sizing: border-box;
+        }
+        #width   {
+            width: 95%;
+            padding: 3px 5px;
+            box-sizing: border-box;
+        }
+        .chuvi   {
+            width: 95%;
+            padding: 3px 5px;
+            box-sizing: border-box;
+        }
+        .dientich   {
+            width: 95%;
+            padding: 3px 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="left">Nhập độ dài:</td>
+            <td class="right"><input id="lenght"></td>
+        </tr>
+        <tr>
+            <td class="left">Nhập độ rộng:</td>
+            <td class="right"><input id="width"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="btn">
+                <button onclick="calculate()">Tính Toán</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="left">Chu Vi Là:</td>
+            <td id="perimeter" class="right"><input type="text" class="chuvi"></td>
+        </tr>
+        <tr>
+            <td class="left">Diện Tích Là:</td>
+            <td id="area" class="right"><input type="text" class="dientich"></td>
+        </tr>
+    </table>
+    <script>
+        "use strict";
+        function calculate() {
+            const lenght = Number(document.getElementById("lenght").value);
+            const width = Number(document.getElementById("width").value);
+            if(lenght<=0||width<=0){
+                alert("Chiều Dài Rộng luôn lớn hơn 0");
+                return
+            }
+            const perimeter = (lenght+width)*2;
+            const area = lenght*width;
+            document.getElementById("perimeter").innerText = perimeter;
+            document.getElementById("area").innerText = area;
+
+
+        }
+    </script>
+    
+</body>
+</html>

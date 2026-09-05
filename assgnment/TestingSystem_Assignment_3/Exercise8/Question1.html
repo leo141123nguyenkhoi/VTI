@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calculator {
+            width: 320px;
+            border: 2px solid black;
+            padding-left: 10px;
+        }
+        input {
+            width: 200px;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        button{
+            margin-right: 5px;
+            padding: 5px 10px;
+        }
+        #result {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <p>Number 1: <input id="number1" type="text"></p>
+        <p>Number 2: <input id ="number2" type="text"></p>
+        <button onclick="calculate('+')">Cộng</button>
+        <button onclick="calculate('-')">Trừ</button>
+        <button onclick="calculate('*')">Nhân</button>
+        <button onclick="calculate('/')">Chia</button>
+        <button onclick="calculate('%')">%</button>
+        <p id = "result">Kết quả: </p>
+    </div>
+    <script>
+        "use strict";
+
+        function calculate(operator) {
+            const number1= Number(document.getElementById("number1").value);
+            const number2= Number(document.getElementById("number2").value);
+
+            let result;
+            switch (operator) {
+                case "+": 
+                result = number1 + number2;
+                break;
+
+                case "-": 
+                result = number1 - number2;
+                break;
+
+                case "*": 
+                result = number1 * number2;
+                break;
+
+                case "/": 
+                if (number2 === 0) {
+                    result = "Không thể chia cho 0";
+                } else {
+                    result = number1/number2;
+                }
+                break;
+
+                case "%": 
+                if (number2 === 0) {
+                    result = "Không thể chia cho 0";
+                } else {
+                    result = number1%number2;
+                }
+                break;
+            }
+            document.getElementById("result").innerText = "Kết quả: " + result;
+        }
+    </script>
+</body>
+</html>

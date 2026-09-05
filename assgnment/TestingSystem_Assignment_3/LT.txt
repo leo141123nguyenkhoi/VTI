@@ -1,0 +1,14 @@
+Trong đó dùng const để gội hàm lên
+
+Hiện thông báo dùng alert()
+    trong ngoặc là ngôn ngữ cần hiện thông báo
+
+Dùng document.write() để in ra màn hình
+    trong ngoặc là ngôn ngữ cần hiện thông báo
+
+Dùng console.log () để hiện trong console
+    trong ngoặc là ngôn ngữ cần hiện thông báo
+
+Dùng confirm để trả lời có hoặc không
+
+Dùng prompt để dùng dạng text
