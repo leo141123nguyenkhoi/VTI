@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin Chafo</title>
+    <script>
+        function changeContent() {
+            document.getElementById("demo").innerHTML = "Lập trình JS"
+            }
+    </script>
+</head>
+<body>
+    <div id="demo">
+        Xin chao Ha Nội
+    </div>
+    <div id = "title">
+        Xin Chao
+    </div>
+    
+    <button type="button" onclick="changeContent()">
+    Click
+    </button>
+    <button id = "btn">Click</button>
+    <button onclick="myFunc()">Try it</button>
+
+
+    <p>Click the button</p>
+    <script>
+        var age = 18;
+        var text = "Khong the lai xe";
+        if (age>=18){
+            text = "Co the lai xe"
+        }
+        console.log(text)
+        console.log(age)
+        document.write(age)
+        // alert("Ban co muon iphonr khong")
+        const title = document.getElementById("title")
+        title.style.color = "red";
+        title.style.fontSize= "30px";
+        title.style.fontWeight= "bold";
+
+        const button = document.getElementById("btn");
+        button.addEventListener("click", function() {
+            alert("Đang Học");});
+
+        function myFunc() {
+            var btn = document.appendChild(btn)
+        }
+
+    </script>
+    
+</body>
+</html>

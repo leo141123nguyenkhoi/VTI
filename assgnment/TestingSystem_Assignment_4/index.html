@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Cách 1 online, lên trang chủ, copy link jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--  Cách 2 gọi offline
+    tải file về
+    <script src="js/jquery-4.0.0.min.js"></script> -->
+    
+</head>
+<body>
+    <!-- 1. HTML/DOM 
+     là nhóm giúp jquểy đọc, thêm, sửa xoá HTML/DOM element -->
+     <h1 id="title">Hello</h1>
+     <p class="message">welcom</p>
+     <ul id="students" class="list-childent">
+        <li>Nguyễn Chí Thanh</li>
+        <li>Hoaòng Đao Thuý</li>
+        <li>Trần cung</li>
+     </ul>
+
+     <script>
+        // Thay đổi nội dung của thẻ HTML, thay đổi bằng text hoặc html
+        $('#title').text('Xin Chào');
+        $('.message').html('<b> Chào mừnng bạn đến với JQUERY');
+        
+        // Thêm thẻ HTML mới vào DOM
+        $('#students').append('<li>Lê Văn Lương</li>'); // cuối bảng
+        $('#students').prepend('<li>Lê Văn Bằng</li>'); // đầu bằng
+
+        //  Xoá thẻ HTML khỏi DOM
+        $('#students li:last-child').remove();
+
+        // Xoá nội dung bên trong element
+        $('#students').empty(); // xoá hết
+        
+     </script>
+     
+     <!-- 2. CSS -->
+      <h1 id="title2">Xin Xhàooo</h1>
+      <p class="message2">Wecomeew</p>
+
+      <script>
+        //1 thuộc tính css
+        $('#title2').css('color', 'red');
+        // Nhiều thuộc tính CSS
+        $('.message2').css({
+            'font-size': '50px',
+            'color': 'blue',
+
+        })
+      </script>
+
+      <!-- 3. Add/Remove CSS Classes -->
+        <h1 id="title3">Xin Xhàooo</h1>
+        <p class="message3">Wecomeew</p>
+        <script>
+            //Thêm class vài elenment
+            $('#title3').addClass('cls-hello');
+
+            //Xoá class khỏi element
+            $('.messae3').removeClass('.message3')
+
+            //Kiểm tra element có class hay không
+            if ($('students').hasClass('list-childent')) {
+                console.log('Có class')
+            } else {
+                console.log('không có class')
+            }
+        </script>
+
+        <!-- 4. HTML even methods -->
+         <button id="btn">Click Me</button>
+         <script>
+            // Thay thế onclick trong HTML
+            $('#btn').click(function() {
+                alert('button clicked');
+            });
+
+            //Mouse Event
+            $('#btn').on('mouseleave', function() {
+                $(this).css('background-color', 'red');
+            });
+         </script>
+
+         <!-- 5. From Event Methods -->
+          <form id="loginForm">
+            <input type="text" id="username" placeholder="Enter your name">
+            <button type="submit">Sumit</button>
+          </form>
+
+          <script>
+            $('#loginForm').on('submit', function(e) {
+                e.preventDefault();
+                alert('From Submit')
+            })
+          </script>
+
+          <!-- 6. Effects abd animations
+           Là Nhóm giúp Jquery tạo hiệu ứng, animation cho elêmnt -->
+           <div id="box"></div>
+
+           <!-- 7. AJAX
+            CHo phép gửi request lên sever  -->
+          <script>
+            $.ajax({
+                url: "/api/users",
+                method: "GET",
+
+                success: function(data) {
+                    console.log(data)
+                },
+
+                error: function(error) {
+                    console.log(error)
+                }
+            });
+          </script>
+
+          <!-- Window OnLoad -->
+           <img src="./img/Cô Gái.webp" alt="">
+
+           <script>
+            window.onload = function() {
+                console.log("Loading....")
+            };
+           </script>
+
+           <!-- Cú pháp CallBack Funcition -->
+            <script>
+                function FuncitionA(callback) {
+                    callback();
+                }
+                function FuncitionB() {
+                    //xử lý call back
+                }
+                FuncitionA(FuncitionB);
+            </script>
+</body>
+</html>
